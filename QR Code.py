@@ -2,7 +2,7 @@ import streamlit as st
 import qrcode
 import io
 import base64
-from typing import Iterable
+
 
 def generate_qr_code(content):
     # Generate QR code
