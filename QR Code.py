@@ -3,7 +3,6 @@ import qrcode
 import io
 import base64
 
-
 def generate_qr_code(content):
     # Generate QR code
     qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=10, border=4)
