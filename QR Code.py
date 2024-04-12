@@ -2,6 +2,7 @@ import streamlit as st
 import qrcode
 import io
 import base64
+from typing import Iterable
 
 def generate_qr_code(content):
     # Generate QR code
@@ -16,11 +17,11 @@ def generate_qr_code(content):
     return qr_code_buffer.getvalue()
 
 def main():
-    st.title('Generador de QR Code')
+    st.title('QR Code Generator')
 
     # Get content for QR code from user input
-    content = st.text_area('Introduce el contenido de tu QR code:')
-    if st.button('Generador de QR Code'):
+    content = st.text_area('Enter the content for your QR code:')
+    if st.button('Generate QR Code'):
         # Generate QR code
         qr_code_image = generate_qr_code(content)
 
